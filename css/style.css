@@ -10,14 +10,14 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
-  padding: 60px;
+  padding:20px;
   width: 100%;
   background-color: #FFF;
   border-radius: 5px !important;
 }
 .home{
   background-color: #f8f9fa;
-  padding: 30px;
+  padding: 20px;
 }
 #todoList {
   padding: 20px;
@@ -34,7 +34,6 @@ body {
   align-items: center;
 }
 .completed{
-background-color: #FFF !important;
 height: 100px;
 }
 .uncompleted h3{
@@ -52,7 +51,7 @@ height: 100px;
 }
 .font-weight-bolder {
   font-weight: bolder!important;
-  font-size: 30pt;
+  font-size: 7vw;
 }
 .form-group input {
 font-size: 20px;
@@ -76,8 +75,7 @@ font-size: 30px;
   background:#f9f9f9;
   border-radius:8px;
   padding: 25px;
-  margin-top: 0px;
-  margin-left:50px;
+  margin-top: 110px;
   align-items:center;
   justify-content:space-between;
   display: none;
@@ -147,8 +145,33 @@ font-size: 30px;
 
 }
 .squareLi{
-  background-color: #5a5858 !important;
+  background-color: #8f8e8e43 !important;
 }
 .dark > * {
   color: #ffffff;
+}
+.iColor {
+  color: #FFF !important;
+}
+@media only screen and (min-width: 1000px) {
+  .font-weight-bolder {
+    font-weight: bolder!important;
+    font-size: 3.5vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+li h3 {
+  font-size: 20px !important;
+}
+li button {
+  padding: 4px 8px !important;
+}
+.brightness-box {
+  padding: 15px;
+  width: 200px;
+}
+#range::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+}
 }

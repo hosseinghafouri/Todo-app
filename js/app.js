@@ -3,6 +3,7 @@ let itemInput = $.querySelector("#itemInput");
 let addBtn = $.querySelector("#addButton");
 let clearBtn = $.querySelector("#clearButton");
 let todoListElems = $.querySelector("#todoList");
+let listContainer = $.querySelector(".list-container");
 // console.log(itemInput, addBtn, clearBtn, todoListElems);
 let todosArray = [];
 function newTodoLocal (itemInputValue) {
@@ -24,7 +25,7 @@ function newTodoDom(todoList) {
 
     todoList.forEach((e) => {
     liElem = $.createElement("li");
-    liElem.className = "completed well list-container";
+    liElem.className = "completed well list-container squareLi";
 
     h3Elem = $.createElement("h3");
     h3Elem.innerHTML = e.titel;
@@ -42,7 +43,7 @@ function newTodoDom(todoList) {
     btnDanger.className = "btn btn-danger";
     btnDanger.innerHTML = "Delete";
         if (e.complete) {
-        liElem.className = "uncompleted completed well list-container";
+        liElem.className = "uncompleted completed well list-container squareLi";
         btnSuccess.innerHTML = "done";    
         };
     divElem.append(btnSuccess, btnDanger)
@@ -111,11 +112,9 @@ function loadHandler() {
     if (localStorageTheme === "dark") {
         $.body.classList.add("dark");
         homeElem.classList.add("dark");
+        iElem.classList.add("iColor");
         statickElem.classList.add("square");
         todoListElems.classList.add("square");
-        // todoListElems.classList.add("dark");
-        // itemInput.classList.add("square");
-        // itemInput.style.border = "none";
     }
 };
 addBtn.addEventListener('click', addBtnHandler);
@@ -141,9 +140,11 @@ inputRange.addEventListener('change', inputRangeHandler);
 let switchElement = $.querySelector(".switch");
 let homeElem = $.querySelector(".home");
 let statickElem = $.querySelector(".statick");
+let iElem = $.querySelector(".fas");
 switchElement.addEventListener('click', ()=> {
     $.body.classList.toggle("dark");
     homeElem.classList.toggle("dark");
+    iElem.classList.toggle("iColor");
     statickElem.classList.toggle("square");
     todoListElems.classList.toggle("square");
   if ($.body.className.includes("dark")) {
