@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SabzLearn TodoList" />
+    <meta name="author" content="SabzLearn" />
+    <title>Todo List App</title>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+        <div class="home">
+          <div class="statick">
+            <div class="header">
+            <button class="btn-brightness"><i class="fas fa-sun"></i></button>
+          <div class="brightness-box">
+            <i class="far fa-sun"></i>
+            <input type="range" id="range" min="10" max="100" value="100">
+            <!-- <i class="fas fa-sun"></i> -->
+        </div>
+        <p class="text-center font-weight-bolder">Todo List App</p>
+        <div class="switch">
+          <div class="flicker"></div>
+          <div class="moon"></div>
+        </div>
+      </div>
+
+      <br>
+      <div class="form-group d-flex justify-content-center">
+        <input type="text"class="form-control" name="" id="itemInput"  placeholder="Write your todo list ..." />
+      </div>
+      <br>
+      <div class="d-flex justify-content-center">
+      <button id="addButton" class="btn btn-primary">Add To List</button>
+      <button id="clearButton" class="btn btn-danger">Clear Todo Lists</button>
+    </div>
+        <!-- <h3 class="text-center">درگبل کردن</h3> -->
+        <br>
+        <hr>
+      </div>
+        <ul id="todoList">
+        </ul>
+        </div>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+  
+</html>
