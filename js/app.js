@@ -133,6 +133,9 @@ function inputRangeHandler(event) {
 };
 function btnBrightnessHandler() {
     boxBrightness.classList.toggle("show-brightness");
+    setTimeout(() => {
+    boxBrightness.classList.toggle("show-brightness");
+    }, 4000);
 };
 btnBrightness.addEventListener('click', btnBrightnessHandler)
 inputRange.addEventListener('change', inputRangeHandler);
